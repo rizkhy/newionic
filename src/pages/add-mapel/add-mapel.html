@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>Tambah Mapel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<input type="hidden" [(ngModel)]="mapel.id" />
+  <ion-item>
+    <ion-label stacked>Kode Mapel</ion-label>
+    <ion-input [(ngModel)]="mapel.kode" type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Nama Mapel</ion-label>
+    <ion-input [(ngModel)]="mapel.nama" type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>KKM</ion-label>
+    <ion-input [(ngModel)]="mapel.kkm" type="text"></ion-input>
+  </ion-item>
+  <button ion-button color="primary" (click)="addMapel
+  (mapel.id, mapel.kode, mapel.nama, mapel.kkm)"> 
+  <span *ngIf="mapel.id">Update mapel</span>
+  <span *ngIf="!mapel.id">Add mapel</span> </button>
+
+</ion-content>

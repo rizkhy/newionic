@@ -1,0 +1,64 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>Tambah Siswa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<input type="hidden" [(ngModel)]="siswa.id" />
+  <ion-item>
+    <ion-label stacked>NIS</ion-label>
+    <ion-input [(ngModel)]="siswa.nis" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Nama Lengkap</ion-label>
+    <ion-input [(ngModel)]="siswa.nama" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Password</ion-label>
+    <ion-input [(ngModel)]="siswa.password" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Kelas</ion-label>
+    <ion-select [(ngModel)]="siswa.kelas">
+      <ion-option value="IPA">IPA</ion-option>
+      <ion-option value="IPS">IPS</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Semester</ion-label>
+    <ion-select [(ngModel)]="siswa.semester">
+      <ion-option value="Genap">Genap</ion-option>
+      <ion-option value="Ganjil">Ganjil</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Tahun Ajaran</ion-label>
+    <ion-select [(ngModel)]="siswa.thn_ajaran">
+      <ion-option value="2019">2019</ion-option>
+      <ion-option value="2018">2018</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Nama Ortu</ion-label>
+    <ion-input [(ngModel)]="siswa.nama_ortu" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Pekerjaan Ortu</ion-label>
+    <ion-input [(ngModel)]="siswa.pekerjaan_ortu" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Alamat</ion-label>
+    <ion-textarea [(ngModel)]="siswa.alamat" type="text" ></ion-textarea>
+  </ion-item>
+  <button ion-button color="primary" (click)="addSiswa
+  (siswa.id, siswa.nis, siswa.nama, siswa.password, siswa.kelas, siswa.semester, siswa.thn_ajaran,
+   siswa.nama_ortu, siswa.pekerjaan_ortu)"> 
+  <span *ngIf="siswa.id">Update Contact</span><span *ngIf="!siswa.id">Add Contact</span>
+  </button>
+
+</ion-content>

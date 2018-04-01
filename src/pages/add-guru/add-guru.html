@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>Tambah Guru</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<input type="hidden" [(ngModel)]="guru.id" />
+  <ion-item>
+    <ion-label stacked>Name</ion-label>
+    <ion-input [(ngModel)]="guru.nama" type="text" placeholder="Fill yor first and last name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Address</ion-label>
+    <ion-input [(ngModel)]="guru.alamat" type="text" placeholder="Fill your full address"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Phone</ion-label>
+    <ion-input [(ngModel)]="guru.usia" type="text" placeholder="Fill your phone number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>City</ion-label>
+    <ion-input [(ngModel)]="guru.nohp" type="text" placeholder="Fill your city"></ion-input>
+  </ion-item>
+  <button ion-button color="primary" (click)="addGuru
+  (guru.id, guru.nama, guru.alamat, guru.usia, guru.nohp)"> 
+  <span *ngIf="guru.id">Update Guru</span>
+  <span *ngIf="!guru.id">Add Guru</span> </button>
+
+</ion-content>

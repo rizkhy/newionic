@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>Data Guru</ion-title>
+    <ion-buttons end>
+    	<button ion-button icon-only (click)="AddGuru()">
+    		<ion-icon name="add"></ion-icon>
+    	</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <ion-list>
+ 	<ion-item-sliding *ngFor="let guru of guruList | async">
+    <ion-item>
+      <ion-icon name="book" danger item-left></ion-icon>
+      <h2>{{guru.nama}}</h2>
+      <h3>Alamat: {{guru.alamat}}, {{guru.usia}}</h3>
+      <p>Phone: {{guru.nohp}}</p>
+    </ion-item>
+    <ion-item-options>
+        <button ion-button color="primary" icon-left (click)="editGuru(guru)">
+          <ion-icon name="ios-create"></ion-icon>
+          Edit
+        </button>
+        <button ion-button color="danger" icon-left (click)="deleteGuru(guru)">
+          <ion-icon name="ios-trash"></ion-icon>
+          Hapus
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

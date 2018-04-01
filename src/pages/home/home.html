@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding bg>
+  <div class="row">
+    <div class="col">
+      <button class="font" (click)='nilai()'><img src="assets/img/123.png">Nilai</button>
+    </div>
+    <div class="col">
+      <button class="font" (click)='presensi()'><img src="assets/img/presensi1.png">Presensi</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="font" (click)='transkip()'><img src="assets/img/transkip1.png">Transkip Nilai</button>
+    </div>
+    <div class="col">
+      <button class="font" (click)='mapel()'><img src="assets/img/mapel.png">Mata Pelajaran</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="font" (click)='data_siswa()'><img src="assets/img/siswa.png">Data Siswa</button>
+    </div>
+    <div class="col">
+      <button class="font" (click)='data_guru()'><img src="assets/img/guru.png">Data Guru</button>
+    </div>
+  </div>
+</ion-content>
